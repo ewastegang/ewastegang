@@ -1,118 +1,39 @@
 body {
     background-color:powderblue;
     text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
 }
-h1 {
+
+h1, h2, h5 {
     color: black;
-    text-align: center; /* needs to be centered */
-
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-div.ex1 { 
-
-        /* links to click to other pages */
-        padding: 3px;
-        box-sizing: content-box;
-        background-color: rgb(192, 230, 7);
-        border-style: outset;
-        text-align: center;
-        position: static;
-        margin: 10px;
-        text-transform: capitalize;
-        font-weight: bold;
-      
-        
-
+div.ex1 {
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgb(192, 230, 7);
+    border: 2px solid black;
+    text-align: center;
+    margin: 20px 10px;
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
 a {
-    color: black; /* to link other pages */
-    
-
-}
-
-
-/* social media icons */
-
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-   
-}
-
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-}
-
-.fa-youtube {
-    background: #bb0000;
-    color: white;
-}
-
-.fa-instagram {
-    background: rgb(222, 132, 147);
-    color: white;
-}
-
-.fa-linkedin {
-    background: #007bb5;
-    color: white;
-}
-  
-
-
-
-/* crypto addresses/images */
-
-.column {
-    display: inline-block;
-    width: auto;
-    padding: 10px;
-    margin: 10px;
-  }
-  
-  /* Clearfix (clear floats) */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100px;
-    height: auto;
-  }
-
-/* footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-footer a {
-    color: #fff;
+    color: black;
     text-decoration: none;
 }
 
-footer a:hover {
-    color: #ddd;
+a:hover {
+    color: #777;
 }
 
 .fa {
     padding: 20px;
     font-size: 30px;
-    width: 50px;
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
@@ -120,5 +41,34 @@ footer a:hover {
 
 .fa:hover {
     opacity: 0.7;
+}
+
+.column {
+    display: inline-block;
+    width: auto;
+    padding: 10px;
+    margin: 10px;
+}
+  
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100px;
+    height: auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
 }
 
