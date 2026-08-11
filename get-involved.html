@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Donate &amp; get involved — eWasteGang</title>
+<meta name="description" content="Donate old computers and electronics, give funds, volunteer as a mentor, or host a workshop. eWasteGang is a 501(c)(3) in Norristown, PA.">
+<meta name="author" content="Rashaad Bates">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23070C15'/><path d='M6 16h6m8 0h6M16 6v6m0 8v6' stroke='%234CC9FF' stroke-width='2.5'/><circle cx='16' cy='16' r='4.5' fill='%2335E08A'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: { ink:'#070C15', panel:'#101B2C', panel2:'#16233A', line:'#23324B',
+                circuit:'#35E08A', volt:'#4CC9FF', platter:'#C7D3E3', solder:'#F4B740' },
+      fontFamily: { display:['Space Grotesk','system-ui','sans-serif'],
+                    body:['IBM Plex Sans','system-ui','sans-serif'],
+                    data:['IBM Plex Mono','monospace'] }
+    }}
+  };
+</script>
+
+<link rel="stylesheet" href="site.css">
+</head>
+
+<body class="font-body bg-ink text-platter antialiased">
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ============================ HEADER ============================ -->
+<header class="sticky top-0 z-50 border-b border-line bg-ink/90 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+    <a href="index.html" class="flex items-center gap-3">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="#101B2C"></rect>
+        <path d="M6 16h6m8 0h6M16 6v6m0 8v6" stroke="#4CC9FF" stroke-width="2.5"></path>
+        <circle cx="16" cy="16" r="4.5" fill="#35E08A"></circle>
+      </svg>
+      <span class="font-display text-lg font-bold tracking-tight text-white">eWaste<span class="text-circuit">Gang</span></span>
+    </a>
+
+    <nav class="hidden items-center gap-7 md:flex" aria-label="Main">
+      <a href="index.html" class="nav-link font-data text-xs uppercase tracking-widest hover:text-circuit">Home</a>
+      <a href="about.html" class="nav-link font-data text-xs uppercase tracking-widest hover:text-circuit">About</a>
+      <a href="workshops.html" class="nav-link font-data text-xs uppercase tracking-widest hover:text-circuit">Workshops</a>
+      <a href="services.html" class="nav-link font-data text-xs uppercase tracking-widest hover:text-circuit">Services</a>
+      <a href="get-involved.html" class="rounded-md bg-circuit px-4 py-2 font-data text-xs font-medium uppercase tracking-widest text-ink" aria-current="page">Get involved</a>
+    </nav>
+
+    <button data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" class="rounded-md border border-line p-2 md:hidden">
+      <span class="sr-only">Open menu</span>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+    </button>
+  </div>
+
+  <nav id="mobile-nav" data-nav-panel class="hidden border-t border-line bg-panel md:hidden" aria-label="Main (mobile)">
+    <a href="index.html" class="block border-b border-line px-5 py-3 font-data text-sm uppercase tracking-widest">Home</a>
+    <a href="about.html" class="block border-b border-line px-5 py-3 font-data text-sm uppercase tracking-widest">About</a>
+    <a href="workshops.html" class="block border-b border-line px-5 py-3 font-data text-sm uppercase tracking-widest">Workshops</a>
+    <a href="services.html" class="block border-b border-line px-5 py-3 font-data text-sm uppercase tracking-widest">Services</a>
+    <a href="get-involved.html" class="block px-5 py-3 font-data text-sm uppercase tracking-widest text-circuit">Get involved</a>
+  </nav>
+</header>
+
+
+<main id="main">
+
+<!-- ============================ PAGE HERO ============================ -->
+<section class="border-b border-line">
+  <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:py-20">
+    <div class="reveal">
+      <p class="eyebrow">Get involved</p>
+      <h1 class="mt-5 font-display text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl">
+        Three ways to help. <span class="text-circuit">All of them count.</span>
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed">
+        Give us the hardware, fund the bench it gets fixed on, or stand at the table
+        and show a kid which screw to turn.
+      </p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="#hardware" class="rounded-md bg-circuit px-6 py-3.5 text-center font-display font-semibold text-ink transition hover:bg-white">Donate hardware</a>
+        <a href="#funds" class="rounded-md border border-volt px-6 py-3.5 text-center font-display font-semibold text-volt transition hover:bg-volt hover:text-ink">Give funds</a>
+        <a href="#volunteer" class="rounded-md border border-line px-6 py-3.5 text-center font-display font-semibold text-white transition hover:border-circuit hover:text-circuit">Volunteer</a>
+      </div>
+    </div>
+    <div class="photo-tile reveal overflow-hidden rounded-xl border border-line" data-reveal-delay="120">
+      <img src="IMG_7200.JPEG"
+           alt="A long table of sorted, labelled bins holding reclaimed computer parts and cables ready for the next workshop."
+           class="h-full w-full object-cover" loading="eager">
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================ DONATE HARDWARE ============================ -->
+<section id="hardware" class="mx-auto max-w-6xl px-5 py-20">
+  <div class="reveal max-w-2xl">
+    <p class="eyebrow">Option one</p>
+    <h2 class="mt-4 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+      Donate hardware
+    </h2>
+    <p class="mt-4 leading-relaxed">
+      E-waste is any electronic product that's unwanted, broken, or near the end of
+      its useful life. Most of what we receive still has years left in it — and what
+      doesn't becomes teaching material.
+    </p>
+  </div>
+
+  <div class="mt-12 grid gap-6 lg:grid-cols-2">
+
+    <!-- Accepted -->
+    <div class="reveal rounded-xl border border-circuit/40 bg-panel p-7">
+      <h3 class="flex items-center gap-3 font-display text-xl font-semibold text-white">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#35E08A" stroke-width="2.5" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>
+        We happily take these
+      </h3>
+      <p class="mt-4 font-display text-lg font-semibold text-circuit">All computers, working or not</p>
+      <ul class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+        <li>Laptops &amp; desktops</li>
+        <li>Servers</li>
+        <li>Motherboards</li>
+        <li>RAM</li>
+        <li>CPUs</li>
+        <li>Flat-screen monitors</li>
+        <li>Keyboards &amp; mice</li>
+        <li>Webcams</li>
+        <li>Computer speakers</li>
+        <li>DVD &amp; VHS players</li>
+        <li>Radios</li>
+        <li>Cell phones</li>
+        <li>Walkmen &amp; CD players</li>
+        <li>Tablets</li>
+        <li>Software</li>
+        <li>Video game consoles</li>
+        <li class="col-span-2">Ink &amp; toner cartridges (full or empty)</li>
+      </ul>
+      <p class="mt-5 text-sm leading-relaxed text-platter/80">
+        Something not on the list? Ask us —
+        <a href="mailto:service@ewastegang.org" class="text-volt underline underline-offset-4 hover:text-circuit">service@ewastegang.org</a>
+      </p>
+    </div>
+
+    <div class="space-y-6">
+      <!-- Not accepted -->
+      <div class="reveal rounded-xl border border-solder/40 bg-panel p-7" data-reveal-delay="80">
+        <h3 class="flex items-center gap-3 font-display text-xl font-semibold text-white">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F4B740" stroke-width="2.5" aria-hidden="true"><path d="M12 8v5"></path><circle cx="12" cy="17" r="1" fill="#F4B740" stroke="none"></circle><path d="M12 3L2 20h20z"></path></svg>
+          Not free of charge
+        </h3>
+        <p class="mt-4 leading-relaxed">
+          <strong class="text-white">Tube/CRT monitors, televisions, and batteries</strong>
+          cost money to process safely, so we can't take them for free. Contact us and
+          we'll tell you what's involved or point you somewhere that can help.
+        </p>
+        <p class="mt-4 font-data text-xs uppercase tracking-widest text-solder">
+          And to be clear: we do not buy e-waste.
+        </p>
+      </div>
+
+      <!-- How to hand it over -->
+      <div class="reveal rounded-xl border border-line bg-panel p-7" data-reveal-delay="160">
+        <h3 class="font-display text-xl font-semibold text-white">Three ways to get it to us</h3>
+        <ul class="mt-4 space-y-3 text-sm leading-relaxed">
+          <li class="flex gap-3"><span class="text-circuit">&rarr;</span><span><strong class="text-white">Bring it to any event.</strong> Every workshop we run doubles as a drop-off point. No appointment needed.</span></li>
+          <li class="flex gap-3"><span class="text-circuit">&rarr;</span><span><strong class="text-white">Book a pickup.</strong> We run monthly and bi-monthly collection routes around Norristown. Email us to get on one.</span></li>
+          <li class="flex gap-3"><span class="text-circuit">&rarr;</span><span><strong class="text-white">Bulk clear-out.</strong> Offices, schools and churches replacing a fleet: tell us the count and we'll arrange a dedicated pickup.</span></li>
+        </ul>
+        <p class="mt-5 font-data text-xs uppercase tracking-widest text-platter/60">
+          A permanent drop-off location is in the works.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wipe your device first -->
+  <div id="wipe" class="reveal mt-6 rounded-xl border border-line bg-panel/60 p-7">
+    <h3 class="font-display text-xl font-semibold text-white">Wipe your device before you hand it over</h3>
+    <p class="mt-3 leading-relaxed">
+      We wipe every drive we receive to NSA/DoD-compliant standards, but you should
+      always erase your own data first. It takes a few minutes.
+    </p>
+    <div class="mt-5 flex flex-wrap gap-3">
+      <a href="https://support.google.com/android" target="_blank" rel="noopener"
+         class="rounded-md border border-line px-4 py-2.5 font-data text-xs uppercase tracking-widest hover:border-volt hover:text-volt">
+        Android &mdash; search "factory reset" &nearr;
+      </a>
+      <a href="https://support.apple.com/guide/iphone/" target="_blank" rel="noopener"
+         class="rounded-md border border-line px-4 py-2.5 font-data text-xs uppercase tracking-widest hover:border-volt hover:text-volt">
+        iPhone / iPad &mdash; search "erase iPhone" &nearr;
+      </a>
+      <!-- EDIT ME: paste your YouTube channel URL here. -->
+      <a href="#" target="_blank" rel="noopener"
+         class="rounded-md border border-line px-4 py-2.5 font-data text-xs uppercase tracking-widest hover:border-volt hover:text-volt">
+        Our walkthrough videos &nearr;
+      </a>
+    </div>
+    <p class="mt-5 text-sm text-platter/80">
+      Can't figure it out? Bring the device to a
+      <a href="workshops.html" class="text-volt underline underline-offset-4 hover:text-circuit">Wipe It Before You Ditch It</a>
+      session and we'll do it with you. We also offer certified data destruction at
+      $10 per hard drive &mdash; see <a href="services.html#data" class="text-volt underline underline-offset-4 hover:text-circuit">services</a>.
+    </p>
+  </div>
+</section>
+
+
+<!-- ============================ DONATE FUNDS ============================ -->
+<section id="funds" class="border-y border-line bg-panel/40 py-20">
+  <div class="mx-auto max-w-6xl px-5">
+
+    <div class="reveal max-w-2xl">
+      <p class="eyebrow">Option two</p>
+      <h2 class="mt-4 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        Fund the workbench
+      </h2>
+      <p class="mt-4 leading-relaxed">
+        Hardware arrives free. Everything around it doesn't. Money goes to replacement
+        parts, tools, safety gear, table covering, lab coats for students, transport
+        for pickups, and the workspace where machines get repaired between sessions.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 lg:grid-cols-3">
+
+      <!-- Check / money order -->
+      <div class="card-lift reveal rounded-xl border border-line bg-panel p-7">
+        <h3 class="font-display text-xl font-semibold text-white">Check or money order</h3>
+        <p class="mt-3 text-sm leading-relaxed">Make payable to <strong class="text-white">ewastegang.org</strong> and mail to:</p>
+        <!-- EDIT ME: fill in the PO Box number. -->
+        <address class="mt-3 font-data text-sm not-italic leading-relaxed text-platter/80">
+          ewastegang.org<br>
+          PO Box [number]<br>
+          Norristown, PA 19403
+        </address>
+      </div>
+
+      <!-- Cash App -->
+      <div class="card-lift reveal rounded-xl border border-line bg-panel p-7" data-reveal-delay="80">
+        <h3 class="font-display text-xl font-semibold text-white">Cash App</h3>
+        <p class="mt-3 text-sm leading-relaxed">Scan the code with your phone camera.</p>
+        <img src="cASHAPP.PNG" alt="Cash App QR code for donating to eWasteGang"
+             class="mt-4 w-40 rounded-lg border border-line bg-white p-2" loading="lazy">
+      </div>
+
+      <!-- In-kind -->
+      <div class="card-lift reveal rounded-xl border border-line bg-panel p-7" data-reveal-delay="160">
+        <h3 class="font-display text-xl font-semibold text-white">In-kind donations</h3>
+        <p class="mt-3 text-sm leading-relaxed">
+          Non-cash gifts: goods, professional services, or paying one of our bills
+          directly. Tools, storage bins, printing and venue time all help.
+        </p>
+        <p class="mt-3 text-sm leading-relaxed text-platter/80">
+          Don't know what your donation is worth? We'll calculate it for you.
+        </p>
+      </div>
+    </div>
+
+    <!-- Crypto -->
+    <div class="reveal mt-6 rounded-xl border border-line bg-panel p-7 sm:p-8">
+      <h3 class="font-display text-xl font-semibold text-white">Cryptocurrency</h3>
+      <p class="mt-3 max-w-3xl text-sm leading-relaxed">
+        Tap an address to copy it. If you'd like a receipt for tax purposes, send us
+        your email or mailing address along with your public key and the transaction ID.
+      </p>
+
+      <div class="mt-6 grid gap-4 sm:grid-cols-2">
+
+        <div class="flex items-center gap-4 rounded-lg border border-line bg-ink p-4">
+          <img src="bitcoin.jpg" alt="" class="h-10 w-10 flex-none rounded" loading="lazy">
+          <div class="min-w-0 flex-1">
+            <p class="font-display text-sm font-semibold text-white">Bitcoin</p>
+            <p class="truncate font-data text-xs text-platter/70">3FQPvFHAa7yx479Zkm3RoMGoWkbBGzLKpt</p>
+          </div>
+          <button data-copy="3FQPvFHAa7yx479Zkm3RoMGoWkbBGzLKpt" class="flex-none rounded border border-line px-3 py-1.5 font-data text-xs uppercase tracking-widest hover:border-circuit hover:text-circuit">Copy</button>
+        </div>
+
+        <div class="flex items-center gap-4 rounded-lg border border-line bg-ink p-4">
+          <img src="ethereum.jpg" alt="" class="h-10 w-10 flex-none rounded" loading="lazy">
+          <div class="min-w-0 flex-1">
+            <p class="font-display text-sm font-semibold text-white">Ethereum</p>
+            <p class="truncate font-data text-xs text-platter/70">0xA579755170cC9f2DEc165fc33F65f0d026Bf4Ba6</p>
+          </div>
+          <button data-copy="0xA579755170cC9f2DEc165fc33F65f0d026Bf4Ba6" class="flex-none rounded border border-line px-3 py-1.5 font-data text-xs uppercase tracking-widest hover:border-circuit hover:text-circuit">Copy</button>
+        </div>
+
+        <div class="flex items-center gap-4 rounded-lg border border-line bg-ink p-4">
+          <img src="litecoin.jpg" alt="" class="h-10 w-10 flex-none rounded" loading="lazy">
+          <div class="min-w-0 flex-1">
+            <p class="font-display text-sm font-semibold text-white">Litecoin</p>
+            <p class="truncate font-data text-xs text-platter/70">MVnJ1baXmMZgunbdFBXE1vpTniEHjym9hj</p>
+          </div>
+          <button data-copy="MVnJ1baXmMZgunbdFBXE1vpTniEHjym9hj" class="flex-none rounded border border-line px-3 py-1.5 font-data text-xs uppercase tracking-widest hover:border-circuit hover:text-circuit">Copy</button>
+        </div>
+
+        <div class="flex items-center gap-4 rounded-lg border border-line bg-ink p-4">
+          <img src="bitcoin_cash.jpg" alt="" class="h-10 w-10 flex-none rounded" loading="lazy">
+          <div class="min-w-0 flex-1">
+            <p class="font-display text-sm font-semibold text-white">Bitcoin Cash</p>
+            <p class="truncate font-data text-xs text-platter/70">qpgryjypxrdmx684vy2tr4amw5036k6ckgtfzn6h2e</p>
+          </div>
+          <button data-copy="qpgryjypxrdmx684vy2tr4amw5036k6ckgtfzn6h2e" class="flex-none rounded border border-line px-3 py-1.5 font-data text-xs uppercase tracking-widest hover:border-circuit hover:text-circuit">Copy</button>
+        </div>
+
+        <div class="flex items-center gap-4 rounded-lg border border-line bg-ink p-4">
+          <img src="usdc_ether.jpg" alt="" class="h-10 w-10 flex-none rounded" loading="lazy">
+          <div class="min-w-0 flex-1">
+            <p class="font-display text-sm font-semibold text-white">USDC <span class="font-body text-xs font-normal text-platter/60">(Ethereum network)</span></p>
+            <p class="truncate font-data text-xs text-platter/70">0xB4D4D4DD5923798f2bcE13f7923FE3dE7785Bd70</p>
+          </div>
+          <button data-copy="0xB4D4D4DD5923798f2bcE13f7923FE3dE7785Bd70" class="flex-none rounded border border-line px-3 py-1.5 font-data text-xs uppercase tracking-widest hover:border-circuit hover:text-circuit">Copy</button>
+        </div>
+
+        <div class="flex items-center gap-4 rounded-lg border border-line bg-ink p-4">
+          <img src="zcash.jpg" alt="" class="h-10 w-10 flex-none rounded" loading="lazy">
+          <div class="min-w-0 flex-1">
+            <p class="font-display text-sm font-semibold text-white">Zcash</p>
+            <p class="truncate font-data text-xs text-platter/70">t1Mp4TgxZnBssbNZqF51GWZwi9pUqWN9bqQ</p>
+          </div>
+          <button data-copy="t1Mp4TgxZnBssbNZqF51GWZwi9pUqWN9bqQ" class="flex-none rounded border border-line px-3 py-1.5 font-data text-xs uppercase tracking-widest hover:border-circuit hover:text-circuit">Copy</button>
+        </div>
+
+        <div class="flex items-center gap-4 rounded-lg border border-line bg-ink p-4">
+          <img src="doge.jpg" alt="" class="h-10 w-10 flex-none rounded" loading="lazy">
+          <div class="min-w-0 flex-1">
+            <p class="font-display text-sm font-semibold text-white">Dogecoin</p>
+            <p class="truncate font-data text-xs text-platter/70">DF3QRZSDgYadB4hbUsZH13Mk6c8oET4cbJ</p>
+          </div>
+          <button data-copy="DF3QRZSDgYadB4hbUsZH13Mk6c8oET4cbJ" class="flex-none rounded border border-line px-3 py-1.5 font-data text-xs uppercase tracking-widest hover:border-circuit hover:text-circuit">Copy</button>
+        </div>
+
+        <!-- No logo file for Polygon in the repo yet — drop polygon.jpg in and
+             swap the placeholder block below for an <img> like the others. -->
+        <div class="flex items-center gap-4 rounded-lg border border-line bg-ink p-4">
+          <span class="flex h-10 w-10 flex-none items-center justify-center rounded bg-panel2 font-data text-xs text-volt">POL</span>
+          <div class="min-w-0 flex-1">
+            <p class="font-display text-sm font-semibold text-white">Polygon</p>
+            <p class="truncate font-data text-xs text-platter/70">0x83B72f8e7E900f103fE2339f37605c78ffdd9648</p>
+          </div>
+          <button data-copy="0x83B72f8e7E900f103fE2339f37605c78ffdd9648" class="flex-none rounded border border-line px-3 py-1.5 font-data text-xs uppercase tracking-widest hover:border-circuit hover:text-circuit">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Receipts / tax -->
+    <div class="reveal mt-6 rounded-xl border border-line bg-panel/60 p-7">
+      <h3 class="font-display text-lg font-semibold text-white">Receipts and tax deductions</h3>
+      <p class="mt-3 text-sm leading-relaxed">
+        Any donation valued at $250 or more will receive a written acknowledgement, as
+        long as we have a return address or email — unless you'd rather we didn't send
+        one. If you don't know the value of an in-kind donation, we'll calculate it for you.
+      </p>
+      <p class="mt-3 text-sm">
+        <a href="https://www.irs.gov/pub/irs-pdf/p1771.pdf" target="_blank" rel="noopener"
+           class="text-volt underline underline-offset-4 hover:text-circuit">
+          IRS Publication 1771 — Charitable Contributions: Substantiation &amp; Disclosure &nearr;
+        </a>
+      </p>
+      <p class="mt-3 text-xs leading-relaxed text-platter/60">
+        We're a 501(c)(3), but we're not tax advisors — check with yours about how a
+        given donation applies to your return.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================ VOLUNTEER / PARTNER ============================ -->
+<section id="volunteer" class="mx-auto max-w-6xl px-5 py-20">
+
+  <div class="reveal max-w-2xl">
+    <p class="eyebrow">Option three</p>
+    <h2 class="mt-4 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+      Volunteer or partner with us
+    </h2>
+    <p class="mt-4 leading-relaxed">
+      Workshops run on people. You don't need to be an engineer — you need to be
+      patient, and willing to say "let's find out" when a kid asks you something.
+    </p>
+  </div>
+
+  <div class="mt-12 grid gap-6 lg:grid-cols-3">
+
+    <article class="card-lift reveal rounded-xl border border-line bg-panel p-7">
+      <p class="font-data text-xs uppercase tracking-widest text-volt">For individuals</p>
+      <h3 class="mt-3 font-display text-xl font-semibold text-white">Be a mentor</h3>
+      <p class="mt-3 text-sm leading-relaxed">
+        Stand at a table for two hours and help four or five students through a
+        teardown. We train you on the session beforehand. IT background welcome but
+        not required.
+      </p>
+      <p class="mt-4 text-sm leading-relaxed text-platter/80">
+        Also useful: repair techs, drivers for pickup runs, photographers, and anyone
+        comfortable with grant writing or bookkeeping.
+      </p>
+    </article>
+
+    <article class="card-lift reveal rounded-xl border border-line bg-panel p-7" data-reveal-delay="80">
+      <p class="font-data text-xs uppercase tracking-widest text-volt">For venues</p>
+      <h3 class="mt-3 font-display text-xl font-semibold text-white">Give us a room</h3>
+      <p class="mt-3 text-sm leading-relaxed">
+        Schools, libraries, churches, rec centres and makerspaces: if you have tables
+        that can get messy and a few hours on a weekend, we'll bring the rest.
+      </p>
+      <a href="workshops.html#bring-us" class="mt-4 inline-block font-data text-xs uppercase tracking-widest text-volt hover:text-circuit">
+        See how hosting works &rarr;
+      </a>
+    </article>
+
+    <article class="card-lift reveal rounded-xl border border-line bg-panel p-7" data-reveal-delay="160">
+      <p class="font-data text-xs uppercase tracking-widest text-volt">For businesses</p>
+      <h3 class="mt-3 font-display text-xl font-semibold text-white">Sponsor a session</h3>
+      <p class="mt-3 text-sm leading-relaxed">
+        Local sponsors cover the consumables for a full workshop, and IT departments
+        cycling out equipment give us our best supply of donated machines. Both are
+        genuinely valuable to us.
+      </p>
+    </article>
+  </div>
+
+  <div class="mt-8 grid gap-6 lg:grid-cols-[1fr_1fr]">
+
+    <div class="photo-tile reveal overflow-hidden rounded-xl border border-line">
+      <img src="IMG_7300.jpeg"
+           alt="Two community partners smiling behind a table of donated components at a workshop."
+           class="h-full w-full object-cover" loading="lazy">
+    </div>
+
+    <!-- Volunteer form -->
+    <div class="reveal rounded-xl border border-line bg-panel p-7 sm:p-8" data-reveal-delay="100">
+      <h3 class="font-display text-2xl font-semibold text-white">Tell us how you'd like to help</h3>
+      <p class="mt-2 text-sm leading-relaxed">
+        This opens a pre-filled email in your mail app — nothing sends until you press send.
+      </p>
+
+      <form class="mt-6 space-y-5"
+            data-mailto-form
+            data-mailto-to="service@ewastegang.org"
+            data-mailto-subject="Volunteer / partner enquiry">
+
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label for="vol-name" class="block font-data text-xs uppercase tracking-widest text-platter/70">Your name *</label>
+            <input id="vol-name" name="name" type="text" required
+                   class="mt-2 w-full rounded-md border border-line bg-ink px-4 py-3 text-white focus:border-circuit focus:outline-none">
+          </div>
+          <div>
+            <label for="vol-email" class="block font-data text-xs uppercase tracking-widest text-platter/70">Email *</label>
+            <input id="vol-email" name="email" type="email" required
+                   class="mt-2 w-full rounded-md border border-line bg-ink px-4 py-3 text-white focus:border-circuit focus:outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label for="vol-role" class="block font-data text-xs uppercase tracking-widest text-platter/70">I'd like to</label>
+          <select id="vol-role" name="role"
+                  class="mt-2 w-full rounded-md border border-line bg-ink px-4 py-3 text-white focus:border-circuit focus:outline-none">
+            <option>Mentor at workshops</option>
+            <option>Help with repairs between sessions</option>
+            <option>Drive a pickup route</option>
+            <option>Offer a venue</option>
+            <option>Sponsor a session</option>
+            <option>Donate a batch of equipment</option>
+            <option>Something else — I'll explain below</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="vol-notes" class="block font-data text-xs uppercase tracking-widest text-platter/70">Tell us a bit more</label>
+          <textarea id="vol-notes" name="notes" rows="4"
+                    class="mt-2 w-full rounded-md border border-line bg-ink px-4 py-3 text-white placeholder:text-platter/40 focus:border-circuit focus:outline-none"
+                    placeholder="Availability, skills, what you have to offer…"></textarea>
+        </div>
+
+        <button type="submit" class="w-full rounded-md bg-circuit px-6 py-3.5 font-display font-semibold text-ink transition hover:bg-white">
+          Open my email
+        </button>
+
+        <p data-form-status class="hidden text-sm text-circuit"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================ PGP ============================ -->
+<section id="pgp" class="border-t border-line bg-panel/40">
+  <div class="mx-auto max-w-6xl px-5 py-16">
+    <details class="reveal rounded-xl border border-line bg-panel p-7">
+      <summary class="flex items-center justify-between gap-4">
+        <span>
+          <span class="font-display text-lg font-semibold text-white">Encrypt your message to us</span>
+          <span class="mt-1 block text-sm text-platter/70">PGP public key for service@ewastegang.org</span>
+        </span>
+        <span class="font-data text-xs uppercase tracking-widest text-circuit">Show key</span>
+      </summary>
+      <pre class="mt-6 overflow-x-auto rounded-lg border border-line bg-ink p-5 font-data text-[11px] leading-relaxed text-platter/80">-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+xjMEY6kLJRYJKwYBBAHaRw8BAQdAblyHxRp0fozDaBe5fj6aUvvu2zCt8EvN
+OUkPowl4OT7NL3NlcnZpY2VAZXdhc3RlZ2FuZy5vcmcgPHNlcnZpY2VAZXdh
+c3RlZ2FuZy5vcmc+wowEEBYKAD4FAmOpCyUECwkHCAkQZHJyM/4YAxsDFQgK
+BBYAAgECGQECGwMCHgEWIQSrnW3+Kms0yge6rbtkcnIz/hgDGwAAeCYBAMyJ
+zVWGf48qcuN+MWLhobzUptKPH3JVgxEaL0WHxdr/AQCX1QrtQC1U+ZjeEBMh
+DRWil6VxZnL8+B3ttAznXigyDs44BGOpCyUSCisGAQQBl1UBBQEBB0BghkD2
+Qsqeww4/lGzmW7TacyMSK0+Xmcz+rDmnBX+KJwMBCAfCeAQYFggAKgUCY6kL
+JQkQZHJyM/4YAxsCGwwWIQSrnW3+Kms0yge6rbtkcnIz/hgDGwAATA4BAO+x
+tojxJr7VhBT0qdO97yZC+R/OQmWTeeAWMXTSPev4AP0cHbr1kGXGD0vrZLrs
+hwt+JgDbol9TnAPkHys6QENhCQ==
+=ZF05
+-----END PGP PUBLIC KEY BLOCK-----</pre>
+    </details>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="border-t border-line bg-panel">
+  <div class="mx-auto max-w-6xl px-5 py-14">
+    <div class="grid gap-10 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <span class="font-display text-lg font-bold text-white">eWaste<span class="text-circuit">Gang</span></span>
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-platter/80">
+          Turning one person's trash into another's treasure — and teaching the
+          next generation how the machines actually work.
+        </p>
+        <p class="mt-5 font-data text-xs uppercase tracking-widest text-platter/60">
+          Powered by Tech Literacy &amp; The E-Waste Gang, a 501(c)(3)<br>
+          Norristown, Pennsylvania
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-data text-xs uppercase tracking-widest text-circuit">Pages</h2>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-volt">Home</a></li>
+          <li><a href="about.html" class="hover:text-volt">About us</a></li>
+          <li><a href="workshops.html" class="hover:text-volt">Workshops</a></li>
+          <li><a href="services.html" class="hover:text-volt">Services &amp; repairs</a></li>
+          <li><a href="get-involved.html" class="hover:text-volt">Donate / get involved</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-data text-xs uppercase tracking-widest text-circuit">Contact</h2>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="mailto:service@ewastegang.org" class="hover:text-volt">service@ewastegang.org</a></li>
+          <li><a href="#wipe" class="hover:text-volt">Wipe your device first</a></li>
+          <li><a href="#pgp" class="hover:text-volt">PGP public key</a></li>
+        </ul>
+        <div class="mt-5 flex gap-3">
+          <a href="#" aria-label="Facebook" class="rounded-md border border-line p-2 hover:border-volt hover:text-volt"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-9h3l1-4h-4V7c0-1.1.3-1.8 1.9-1.8H17V1.6C16.4 1.5 15.3 1.4 14 1.4c-2.9 0-4.9 1.8-4.9 5V9H6v4h3.1v9z"/></svg></a>
+          <a href="#" aria-label="Instagram" class="rounded-md border border-line p-2 hover:border-volt hover:text-volt"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="YouTube" class="rounded-md border border-line p-2 hover:border-volt hover:text-volt"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.8-.5-5.6a3 3 0 0 0-2.1-2.1C18.6 3.8 12 3.8 12 3.8s-6.6 0-8.4.5A3 3 0 0 0 1.5 6.4C1 8.2 1 12 1 12s0 3.8.5 5.6a3 3 0 0 0 2.1 2.1c1.8.5 8.4.5 8.4.5s6.6 0 8.4-.5a3 3 0 0 0 2.1-2.1C23 15.8 23 12 23 12zM9.8 15.5v-7l6.2 3.5z"/></svg></a>
+          <a href="#" aria-label="LinkedIn" class="rounded-md border border-line p-2 hover:border-volt hover:text-volt"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.9 21H3.3V9h3.6zM5.1 7.4A2.1 2.1 0 1 1 5.1 3a2.1 2.1 0 0 1 0 4.4zM21 21h-3.6v-5.8c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V21H9.6V9H13v1.6h.1a3.8 3.8 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="trace-rule my-10"></div>
+
+    <p class="font-data text-xs text-platter/50">
+      &copy; <span data-year>2026</span> ewastegang.org &mdash; a DBA of Tech Literacy &amp; The E-Waste Gang.
+      Built and maintained in-house; suggestions always welcome at
+      <a href="mailto:service@ewastegang.org" class="text-volt hover:text-circuit">service@ewastegang.org</a>.
+    </p>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

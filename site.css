@@ -1,0 +1,207 @@
+/* ==========================================================================
+   eWasteGang — site.css
+   Small custom layer that sits ON TOP of Tailwind (loaded via CDN).
+   Tailwind does 95% of the work; this file holds the handful of things
+   Tailwind utilities can't express cleanly: brand tokens, the teardown
+   callout lines, the accepted-items marquee, and scroll reveals.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. BRAND TOKENS
+   Change a colour here and it updates everywhere on every page.
+   -------------------------------------------------------------------------- */
+:root {
+  --ink:      #070C15;   /* page background — near-black navy */
+  --panel:    #101B2C;   /* raised card surface */
+  --panel-2:  #16233A;   /* hover / nested surface */
+  --line:     #23324B;   /* hairline borders */
+  --circuit:  #35E08A;   /* primary: vibrant circuit-trace green */
+  --volt:     #4CC9FF;   /* secondary: electric blue */
+  --platter:  #C7D3E3;   /* body text — cool hard-drive-platter grey */
+  --solder:   #F4B740;   /* warning / "we can't take this" amber */
+}
+
+/* Set the background before Tailwind's CDN script finishes parsing so the
+   page never flashes white on first paint. */
+html { background-color: var(--ink); }
+
+body {
+  background-color: var(--ink);
+  color: var(--platter);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --------------------------------------------------------------------------
+   2. TYPOGRAPHY ROLES
+   Display = Space Grotesk (technical, a little mechanical)
+   Body    = IBM Plex Sans (warm, readable, engineering-adjacent)
+   Utility = IBM Plex Mono (eyebrows, labels, data, wallet addresses)
+   -------------------------------------------------------------------------- */
+.font-display { font-family: 'Space Grotesk', system-ui, sans-serif; }
+.font-body    { font-family: 'IBM Plex Sans', system-ui, sans-serif; }
+.font-mono2   { font-family: 'IBM Plex Mono', ui-monospace, monospace; }
+
+/* Small uppercase mono label used above section headings. */
+.eyebrow {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--volt);
+}
+
+/* --------------------------------------------------------------------------
+   3. SIGNATURE ELEMENT — TEARDOWN CALLOUTS
+   The hero photo is annotated like a technical teardown diagram: hairline
+   leader lines pointing at real parts in the picture. Hidden below md so
+   small screens just get the photograph.
+   -------------------------------------------------------------------------- */
+.teardown { position: relative; }
+
+.callout {
+  position: absolute;
+  display: none;                 /* revealed at md+ via the rule below */
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #EAF2FF;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+/* The dot that sits on the part being labelled. */
+.callout::before {
+  content: '';
+  width: 7px; height: 7px;
+  border-radius: 999px;
+  background: var(--circuit);
+  box-shadow: 0 0 0 4px rgba(53, 224, 138, 0.22);
+  flex: none;
+}
+
+.callout span {
+  background: rgba(7, 12, 21, 0.82);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--volt);
+  padding: 0.3rem 0.55rem;
+  backdrop-filter: blur(4px);
+}
+
+/* Only on wide screens: the labels need room to sit over the photo
+   without covering the student's face. */
+@media (min-width: 1024px) {
+  .callout { display: flex; }
+}
+
+/* --------------------------------------------------------------------------
+   4. ACCEPTED-ITEMS MARQUEE
+   A slow ticker of the hardware we actually take. It's decoration that
+   carries real information, so it earns its place.
+   -------------------------------------------------------------------------- */
+.marquee { overflow: hidden; }
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 48s linear infinite;
+}
+
+.marquee:hover .marquee__track { animation-play-state: paused; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* --------------------------------------------------------------------------
+   5. SCROLL REVEAL (driven by site.js)
+   -------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* --------------------------------------------------------------------------
+   6. SMALL COMPONENTS
+   -------------------------------------------------------------------------- */
+
+/* Circuit-trace hairline used to separate major bands. */
+.trace-rule {
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent, var(--line) 15%, var(--circuit) 50%, var(--line) 85%, transparent);
+  opacity: 0.55;
+}
+
+/* Card lift on hover. */
+.card-lift { transition: transform 0.25s ease, border-color 0.25s ease; }
+.card-lift:hover { transform: translateY(-4px); border-color: var(--circuit); }
+
+/* Photo tiles: images start slightly desaturated and come to full colour
+   on hover, so the grid reads as one texture until you engage with it. */
+.photo-tile img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+  filter: saturate(0.85) contrast(1.03);
+}
+.photo-tile:hover img { transform: scale(1.04); filter: none; }
+
+/* Active nav link marker. */
+.nav-link { position: relative; }
+.nav-link[aria-current="page"] { color: var(--circuit); }
+.nav-link[aria-current="page"]::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 2px;
+  background: var(--circuit);
+}
+
+/* <details> disclosure arrow tint. */
+details > summary { cursor: pointer; list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+
+/* --------------------------------------------------------------------------
+   7. ACCESSIBILITY FLOOR
+   -------------------------------------------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--circuit);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  padding: 0.6rem 1rem;
+  background: var(--circuit);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Honour the OS "reduce motion" setting: kill the ticker and the reveals. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .card-lift, .photo-tile img { transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+html { scroll-behavior: smooth; }
+
+/* Offset anchor targets so the sticky header doesn't cover headings. */
+[id] { scroll-margin-top: 6rem; }
