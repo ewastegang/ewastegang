@@ -1,132 +1,325 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="services.css">
-<meta charset="UTF-8"> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Services &amp; repairs — eWasteGang</title>
+<meta name="description" content="Affordable computer repair, certified data destruction, consulting and refurbished hardware from eWasteGang in Norristown, PA. Every job funds free youth workshops.">
+<meta name="author" content="Rashaad Bates">
 
-<title>ewastegang.org</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23070C15'/><path d='M6 16h6m8 0h6M16 6v6m0 8v6' stroke='%234CC9FF' stroke-width='2.5'/><circle cx='16' cy='16' r='4.5' fill='%2335E08A'/></svg>">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: { ink:'#070C15', panel:'#101B2C', panel2:'#16233A', line:'#23324B',
+                circuit:'#35E08A', volt:'#4CC9FF', platter:'#C7D3E3', solder:'#F4B740' },
+      fontFamily: { display:['Space Grotesk','system-ui','sans-serif'],
+                    body:['IBM Plex Sans','system-ui','sans-serif'],
+                    data:['IBM Plex Mono','monospace'] }
+    }}
+  };
+</script>
+
+<link rel="stylesheet" href="site.css">
 </head>
-<body>
 
-    <p><a href="index.html">Home</a></p>
+<body class="font-body bg-ink text-platter antialiased">
 
+<a class="skip-link" href="#main">Skip to main content</a>
 
-<div><a id="a1">How to Wipe your devices data</div></a>
-<!--links to respectve websites on how to erase data | list them-->
-<a href="https://support.google.com/android" target="_blank"><p>How to erase an Android device (Search"Factory reset")</p></a>
-<a href="https://support.apple.com/guide/iphone/" target="_blank"><p>How to erase an iOS device (Search"Erase iPhone")</p></a>
-<a href="https://www.youtube.com/@EwasteGang" target="_blank">Our YouTube Page</a>
-<!-- just breaking this up --------------------------------------------------  -->
-<a id="a2"><div>How we Collect E-Waste</div></a>
+<!-- ============================ HEADER ============================ -->
+<header class="sticky top-0 z-50 border-b border-line bg-ink/90 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+    <a href="index.html" class="flex items-center gap-3">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="#101B2C"></rect>
+        <path d="M6 16h6m8 0h6M16 6v6m0 8v6" stroke="#4CC9FF" stroke-width="2.5"></path>
+        <circle cx="16" cy="16" r="4.5" fill="#35E08A"></circle>
+      </svg>
+      <span class="font-display text-lg font-bold tracking-tight text-white">eWaste<span class="text-circuit">Gang</span></span>
+    </a>
 
-Electronic waste (E-waste): Describes electronic products that are unwanted, not working, nearing or at the end of their useful life cycle.
-<br>
-<br>
+    <nav class="hidden items-center gap-7 md:flex" aria-label="Main">
+      <a href="index.html" class="nav-link font-data text-xs uppercase tracking-widest hover:text-circuit">Home</a>
+      <a href="about.html" class="nav-link font-data text-xs uppercase tracking-widest hover:text-circuit">About</a>
+      <a href="workshops.html" class="nav-link font-data text-xs uppercase tracking-widest hover:text-circuit">Workshops</a>
+      <a href="services.html" class="nav-link font-data text-xs uppercase tracking-widest hover:text-circuit" aria-current="page">Services</a>
+      <a href="get-involved.html" class="rounded-md bg-circuit px-4 py-2 font-data text-xs font-medium uppercase tracking-widest text-ink hover:bg-white">Get involved</a>
+    </nav>
 
+    <button data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" class="rounded-md border border-line p-2 md:hidden">
+      <span class="sr-only">Open menu</span>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+    </button>
+  </div>
 
-We offer a few ways to recycle your e-waste with us. You can drop off items during <b>ANY</b> and <b>ALL</b> of our events, we also offer monthly and bi-monthly pickups. We will have a dedicated drop off location in the future. 
-<br> 
-<br>
-
-<b>E-Waste we collect:</b> <u><b>ALL COMPUTERS</b></u>, servers, motherboards, RAM, CPUs, flatscreen monitors, keyboards, mice, webcams, computer speakers, DVD/VHS players, radios, cell phones, walkmen/cd players, tablets, software, video game consoles, full/empty toner & ink cartridges.
-<br>
-<br>
-If what you want to recycle isn't listed here please email us: <a href="mailto:service@ewastegang.org">service@ewastegang.org</a>
-    <br>
-<br>
-
-<b>E-Waste we <u>DO NOT</u> collect for free:</b> Tube/CRT Monitors, TV's, batteries. Please contact us for more information.
-<br>
-<br>
-<b>WE DO NOT BUY E-WASTE</b>
-
-<!-- just breaking this up --------------------------------------------------  -->
-<a id="a3"><div>Services We Offer</div></a>
-
-
-    <dt>Free in-person & Virtual educational workshops</dt>
-        <dd>In person PC Workshops Every Thursday night from 6pm - 7:30pm @ 113 E. Airy St, Norristown (Literacy Council of Norristown building) </dd>
-    <br>
-    <dd>Every 3rd Saturday of the month I will be in the computer lab at the Norristown Montgomery County Library from 9am - 12pm</dd>
-<br>
-    <dt>E-waste collection</dt>
-    <br>
-    <dt>Computer repair: setup/virus removal/software & peripheral installs/printer setup</dt>
-        <dd>Remote: $50 for 1<sup>st</sup> 2 hours; $20hr after</dd>
-        <dd>Onsite: $85 for 1<sup>st</sup> 2 hours; $30hr after</dd>
-        <dd>*Same day: $30 fee*</dd>
-        <dd>Pickup: $65 up to 72 hour service</dd>
-<br>
-
-    <dt>Data destruction</dt>
-        <dd>NSA/DoD compliant hard drive erasing software $10 per HDD</dd>
-        <dd>Hard drive shredding - coming soon!</dd>
-<br>
-    <dt>Antivirus software</dt>
-<br>  
-    <dt>Consulting - Please contact us</dt>
-        <dd>Custom PC build</dd>
-        <dd>Compensatory Education </dd>
-        <dd>Security camera installations </dd>
-        <dd>Anything you’re unsure of!</dd>
-<br>   
-
-<!-- just breaking this up --------------------------------------------------  -->
-<a id="a4"><div>E-Stores</div></a>
-    <a href="https://www.ebay.com/usr/ewastegang-org_501c3" target="_blank">eBay Store</a> |
-    <a href="https://www.etsy.com/shop/ewastegang" target="_blank">Etsy Store</a> |
-    <a href="https://pro.opensea.io/profile/0xa0c2f9b37ead6e80dbab5c7013ac0c07fa4822cd" target="_blank">OpenSea Marketplace</a>
-
-    <p>In our eBay store you will find computers and other hardware for sale.</p>
-    <p>In our Etsy store you will find our hand made products by upcycling e-waste.</p>
-    <p>In our NFT marketplace you will find our physical & digital NFT's.</p>
-  
-    <!-- just breaking this up --------------------------------------------------  -->  
-    <a id="a5"><div>Donations</div></a>
-    <p>We accept many forms of donations: Cash, Money Order, Check, Crypto and in-kind donations. </p>
-    <p>Crypto donations: If you would like a receipt for tax purposes, please send us your email or mailing address along with your public key and TX transaction.</p>
-    <p>In-kind donations: In-kind donations are generally non cash donations such as gifts, services or direct payment of a bill to a 3rd party by the donor.</p>
-    <p>Please make all checks and money orders payable to "ewastegang.org".</p>
-    <p>Any dontaions with value of $250+ with a return sender address or email address will receive a written acknowledgement of received donation unless donor requests to not receive it.</p>
-    <p><a href="https://www.irs.gov/pub/irs-pdf/p1771.pdf" target="_blank">IRS Publication 1771</a></p>
+  <nav id="mobile-nav" data-nav-panel class="hidden border-t border-line bg-panel md:hidden" aria-label="Main (mobile)">
+    <a href="index.html" class="block border-b border-line px-5 py-3 font-data text-sm uppercase tracking-widest">Home</a>
+    <a href="about.html" class="block border-b border-line px-5 py-3 font-data text-sm uppercase tracking-widest">About</a>
+    <a href="workshops.html" class="block border-b border-line px-5 py-3 font-data text-sm uppercase tracking-widest">Workshops</a>
+    <a href="services.html" class="block border-b border-line px-5 py-3 font-data text-sm uppercase tracking-widest text-circuit">Services</a>
+    <a href="get-involved.html" class="block px-5 py-3 font-data text-sm uppercase tracking-widest text-circuit">Get involved</a>
+  </nav>
+</header>
 
 
-    <b><p>EIN:</b> 88-1719186</p>  
-    <b><p><a href="https://givebutter.com/ewaste" target="_blank"> GiveButter Donation</a></p></b>
-   <b><p>CashApp:</b> $TechLiteracy</p>  
-    <b><p>Bitcoin:</b> 3FQPvFHAa7yx479Zkm3RoMGoWkbBGzLKpt</p>  
-     <b><p>Ethereum:</b> 0xA579755170cC9f2DEc165fc33F65f0d026Bf4Ba6</p>
-    <b><p>Litecoin:</b> MVnJ1baXmMZgunbdFBXE1vpTniEHjym9hj</p>
-    <b><p>Polygon:</b> 0x83B72f8e7E900f103fE2339f37605c78ffdd9648</p>
-    <b><p>Doge:</b> DF3QRZSDgYadB4hbUsZH13Mk6c8oET4cbJ</p>
-     <b><p>USDC (Ethereum):</b> 0xB4D4D4DD5923798f2bcE13f7923FE3dE7785Bd70</p>
-     <b><p>Zcash:</b> t1Mp4TgxZnBssbNZqF51GWZwi9pUqWN9bqQ</p>
-     
-   
-    
+<main id="main">
+
+<!-- ============================ PAGE HERO ============================ -->
+<section class="border-b border-line">
+  <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:py-20">
+    <div class="reveal">
+      <p class="eyebrow">Services</p>
+      <h1 class="mt-5 font-display text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl">
+        Fair prices, <span class="text-circuit">plain English.</span>
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed">
+        We repair computers, destroy data properly, and consult on the stuff you'd
+        rather not guess at. Every job funds free workshops — and often gives a
+        student supervised hands-on experience.
+      </p>
+      <a href="mailto:service@ewastegang.org" class="mt-8 inline-block rounded-md bg-circuit px-6 py-3.5 font-display font-semibold text-ink transition hover:bg-white">
+        Ask for a quote
+      </a>
+    </div>
+    <div class="photo-tile reveal overflow-hidden rounded-xl border border-line" data-reveal-delay="120">
+      <img src="IMG_5226.JPG"
+           alt="A technician works through a stack of hard drives and components at a repair bench with students looking on."
+           class="h-full w-full object-cover" loading="eager">
+    </div>
+  </div>
+</section>
 
 
+<!-- ============================ REPAIRS ============================ -->
+<section id="repair" class="mx-auto max-w-6xl px-5 py-20">
+  <div class="reveal max-w-2xl">
+    <p class="eyebrow">Computer repair</p>
+    <h2 class="mt-4 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+      Setup, virus removal, installs, printers
+    </h2>
+    <p class="mt-4 leading-relaxed">
+      Software and peripheral installation, malware clean-up, new machine setup,
+      printer wrangling — the everyday problems that make people want to throw a
+      laptop out of a window.
+    </p>
+  </div>
 
-    
+  <div class="mt-12 grid gap-6 md:grid-cols-2">
+
+    <div class="card-lift reveal rounded-xl border border-line bg-panel p-7">
+      <p class="font-data text-xs uppercase tracking-widest text-volt">Remote</p>
+      <p class="mt-3 font-display text-3xl font-bold text-white">$50 <span class="text-base font-medium text-platter/70">first 2 hours</span></p>
+      <p class="mt-2 font-data text-sm text-platter/70">then $20 / hour</p>
+      <p class="mt-4 text-sm leading-relaxed">We connect to your machine and work through it with you on the phone.</p>
+    </div>
+
+    <div class="card-lift reveal rounded-xl border border-line bg-panel p-7" data-reveal-delay="80">
+      <p class="font-data text-xs uppercase tracking-widest text-volt">On site</p>
+      <p class="mt-3 font-display text-3xl font-bold text-white">$85 <span class="text-base font-medium text-platter/70">first 2 hours</span></p>
+      <p class="mt-2 font-data text-sm text-platter/70">then $30 / hour</p>
+      <p class="mt-4 text-sm leading-relaxed">We come to your home or office in the Norristown area.</p>
+    </div>
+
+    <div class="card-lift reveal rounded-xl border border-line bg-panel p-7" data-reveal-delay="160">
+      <p class="font-data text-xs uppercase tracking-widest text-volt">Pickup service</p>
+      <p class="mt-3 font-display text-3xl font-bold text-white">$65 <span class="text-base font-medium text-platter/70">up to 72 hours</span></p>
+      <p class="mt-4 text-sm leading-relaxed">
+        We collect the machine, fix it at the bench, and bring it back. This is the
+        option where a student may assist under supervision — which is part of why
+        it's priced the way it is.
+      </p>
+    </div>
+
+    <div class="card-lift reveal rounded-xl border border-solder/40 bg-panel p-7" data-reveal-delay="240">
+      <p class="font-data text-xs uppercase tracking-widest text-solder">Same-day</p>
+      <p class="mt-3 font-display text-3xl font-bold text-white">+$30 <span class="text-base font-medium text-platter/70">rush fee</span></p>
+      <p class="mt-4 text-sm leading-relaxed">Added to any of the above when you need it today.</p>
+    </div>
+  </div>
+</section>
 
 
+<!-- ============================ DATA + OTHER ============================ -->
+<section class="border-y border-line bg-panel/40 py-20">
+  <div class="mx-auto max-w-6xl px-5">
+    <div class="grid gap-6 lg:grid-cols-3">
 
---------------------------------------------------------------------------------
-<!--Need to add social media buttons/links-->
-<footer>Webiste designed by me. I'm no expert, but please share your comments or suggestions. <br>
-<a href="mailto:service@ewastegang.org">service@ewastegang.org</a><br>
-<p>Powered by Tech Literacy & The E-Waste Gang 501(c)(3)</p>
-<p>Norristown, PA</p>
+      <div id="data" class="card-lift reveal rounded-xl border border-line bg-panel p-7">
+        <h3 class="font-display text-xl font-semibold text-white">Data destruction</h3>
+        <p class="mt-3 text-sm leading-relaxed">
+          NSA/DoD-compliant hard drive erasure, so what was on the drive is genuinely gone.
+        </p>
+        <p class="mt-4 font-display text-2xl font-bold text-circuit">$10 <span class="text-sm font-medium text-platter/70">per drive</span></p>
+        <p class="mt-3 font-data text-xs uppercase tracking-widest text-platter/60">Physical drive shredding — coming soon</p>
+      </div>
 
-<a href="https://www.facebook.com/ewastegang" class="fa fa-facebook" target="_blank"></a>
-<a href="https://www.instagram.com/ewastegang_org/" class="fa fa-instagram" target="_blank"></a>
-<a href="https://www.youtube.com/@EwasteGang" class="fa fa-youtube" target="_blank"></a>
-<a href="https://www.linkedin.com/in/rashaad-bates-439517a9/" class="fa fa-linkedin" target="_blank"></a>
+      <div class="card-lift reveal rounded-xl border border-line bg-panel p-7" data-reveal-delay="80">
+        <h3 class="font-display text-xl font-semibold text-white">Antivirus software</h3>
+        <p class="mt-3 text-sm leading-relaxed">
+          We'll recommend and install protection that actually suits how you use the
+          machine, rather than whatever came bundled and started nagging you.
+        </p>
+      </div>
+
+      <div class="card-lift reveal rounded-xl border border-line bg-panel p-7" data-reveal-delay="160">
+        <h3 class="font-display text-xl font-semibold text-white">E-waste collection</h3>
+        <p class="mt-3 text-sm leading-relaxed">
+          Drop off at any event, or get on a monthly or bi-monthly pickup route.
+        </p>
+        <a href="get-involved.html#hardware" class="mt-4 inline-block font-data text-xs uppercase tracking-widest text-volt hover:text-circuit">
+          What we accept &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Consulting -->
+    <div class="reveal mt-6 rounded-xl border border-line bg-panel p-7 sm:p-8">
+      <h3 class="font-display text-xl font-semibold text-white">Consulting</h3>
+      <p class="mt-3 max-w-3xl text-sm leading-relaxed">
+        Priced per project — tell us what you're trying to do and we'll give you a
+        straight answer about whether we're the right people for it.
+      </p>
+      <ul class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <li class="rounded-lg border border-line bg-ink p-4 text-sm">Custom PC builds</li>
+        <li class="rounded-lg border border-line bg-ink p-4 text-sm">Compensatory education</li>
+        <li class="rounded-lg border border-line bg-ink p-4 text-sm">Security camera installation</li>
+        <li class="rounded-lg border border-line bg-ink p-4 text-sm">Anything you're unsure of</li>
+      </ul>
+      <a href="mailto:service@ewastegang.org" class="mt-6 inline-block rounded-md border border-volt px-5 py-3 font-display font-semibold text-volt transition hover:bg-volt hover:text-ink">
+        Start a conversation
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================ E-STORES ============================ -->
+<section id="stores" class="mx-auto max-w-6xl px-5 py-20">
+  <div class="reveal max-w-2xl">
+    <p class="eyebrow">Shop</p>
+    <h2 class="mt-4 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+      Buy something, fund a workshop
+    </h2>
+    <p class="mt-4 leading-relaxed">
+      Sales of refurbished machines and student-made pieces go straight back into
+      tools, parts and safety gear.
+    </p>
+  </div>
+
+  <div class="mt-12 grid gap-6 md:grid-cols-3">
+
+    <!-- EDIT ME: replace these with your actual store URLs. -->
+    <a href="https://ebay.com" target="_blank" rel="noopener"
+       class="card-lift reveal block rounded-xl border border-line bg-panel p-7">
+      <p class="font-data text-xs uppercase tracking-widest text-volt">eBay</p>
+      <h3 class="mt-3 font-display text-xl font-semibold text-white">Refurbished hardware</h3>
+      <p class="mt-3 text-sm leading-relaxed">Computers and components, tested, wiped and ready to work.</p>
+      <span class="mt-4 inline-block font-data text-xs uppercase tracking-widest text-circuit">Visit store &nearr;</span>
+    </a>
+
+    <a href="https://etsy.com" target="_blank" rel="noopener"
+       class="card-lift reveal block rounded-xl border border-line bg-panel p-7" data-reveal-delay="80">
+      <p class="font-data text-xs uppercase tracking-widest text-volt">Etsy</p>
+      <h3 class="mt-3 font-display text-xl font-semibold text-white">Upcycled pieces</h3>
+      <p class="mt-3 text-sm leading-relaxed">Handmade clocks, sculptures and jewellery built from reclaimed e-waste.</p>
+      <span class="mt-4 inline-block font-data text-xs uppercase tracking-widest text-circuit">Visit store &nearr;</span>
+    </a>
+
+    <a href="https://opensea.io" target="_blank" rel="noopener"
+       class="card-lift reveal block rounded-xl border border-line bg-panel p-7" data-reveal-delay="160">
+      <p class="font-data text-xs uppercase tracking-widest text-volt">OpenSea</p>
+      <h3 class="mt-3 font-display text-xl font-semibold text-white">Physical &amp; digital collectibles</h3>
+      <p class="mt-3 text-sm leading-relaxed">Coming soon.</p>
+      <span class="mt-4 inline-block font-data text-xs uppercase tracking-widest text-circuit">Visit marketplace &nearr;</span>
+    </a>
+  </div>
+</section>
+
+
+<!-- ============================ CTA ============================ -->
+<section class="border-t border-line bg-panel/40">
+  <div class="mx-auto max-w-6xl px-5 py-16">
+    <div class="reveal grid items-center gap-8 lg:grid-cols-[1.4fr_1fr]">
+      <div>
+        <h2 class="font-display text-3xl font-bold tracking-tight text-white">
+          Not sure what you need? Just ask.
+        </h2>
+        <p class="mt-3 leading-relaxed">
+          Describe the problem in your own words. We'll tell you whether it's worth
+          fixing, and we'll say so plainly if it isn't.
+        </p>
+      </div>
+      <a href="mailto:service@ewastegang.org" class="rounded-md bg-circuit px-6 py-3.5 text-center font-display font-semibold text-ink transition hover:bg-white">
+        Email service@ewastegang.org
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="border-t border-line bg-panel">
+  <div class="mx-auto max-w-6xl px-5 py-14">
+    <div class="grid gap-10 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <span class="font-display text-lg font-bold text-white">eWaste<span class="text-circuit">Gang</span></span>
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-platter/80">
+          Turning one person's trash into another's treasure — and teaching the
+          next generation how the machines actually work.
+        </p>
+        <p class="mt-5 font-data text-xs uppercase tracking-widest text-platter/60">
+          Powered by Tech Literacy &amp; The E-Waste Gang, a 501(c)(3)<br>
+          Norristown, Pennsylvania
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-data text-xs uppercase tracking-widest text-circuit">Pages</h2>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-volt">Home</a></li>
+          <li><a href="about.html" class="hover:text-volt">About us</a></li>
+          <li><a href="workshops.html" class="hover:text-volt">Workshops</a></li>
+          <li><a href="services.html" class="hover:text-volt">Services &amp; repairs</a></li>
+          <li><a href="get-involved.html" class="hover:text-volt">Donate / get involved</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-data text-xs uppercase tracking-widest text-circuit">Contact</h2>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="mailto:service@ewastegang.org" class="hover:text-volt">service@ewastegang.org</a></li>
+          <li><a href="get-involved.html#wipe" class="hover:text-volt">Wipe your device first</a></li>
+          <li><a href="get-involved.html#pgp" class="hover:text-volt">PGP public key</a></li>
+        </ul>
+        <div class="mt-5 flex gap-3">
+          <a href="#" aria-label="Facebook" class="rounded-md border border-line p-2 hover:border-volt hover:text-volt"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-9h3l1-4h-4V7c0-1.1.3-1.8 1.9-1.8H17V1.6C16.4 1.5 15.3 1.4 14 1.4c-2.9 0-4.9 1.8-4.9 5V9H6v4h3.1v9z"/></svg></a>
+          <a href="#" aria-label="Instagram" class="rounded-md border border-line p-2 hover:border-volt hover:text-volt"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="YouTube" class="rounded-md border border-line p-2 hover:border-volt hover:text-volt"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.8-.5-5.6a3 3 0 0 0-2.1-2.1C18.6 3.8 12 3.8 12 3.8s-6.6 0-8.4.5A3 3 0 0 0 1.5 6.4C1 8.2 1 12 1 12s0 3.8.5 5.6a3 3 0 0 0 2.1 2.1c1.8.5 8.4.5 8.4.5s6.6 0 8.4-.5a3 3 0 0 0 2.1-2.1C23 15.8 23 12 23 12zM9.8 15.5v-7l6.2 3.5z"/></svg></a>
+          <a href="#" aria-label="LinkedIn" class="rounded-md border border-line p-2 hover:border-volt hover:text-volt"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.9 21H3.3V9h3.6zM5.1 7.4A2.1 2.1 0 1 1 5.1 3a2.1 2.1 0 0 1 0 4.4zM21 21h-3.6v-5.8c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V21H9.6V9H13v1.6h.1a3.8 3.8 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="trace-rule my-10"></div>
+
+    <p class="font-data text-xs text-platter/50">
+      &copy; <span data-year>2026</span> ewastegang.org &mdash; a DBA of Tech Literacy &amp; The E-Waste Gang.
+      Built and maintained in-house; suggestions always welcome at
+      <a href="mailto:service@ewastegang.org" class="text-volt hover:text-circuit">service@ewastegang.org</a>.
+    </p>
+  </div>
 </footer>
 
+<script src="site.js"></script>
 </body>
-</html> 
+</html>

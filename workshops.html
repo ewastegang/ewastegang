@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Workshops — eWasteGang</title>
+<meta name="description" content="Free hands-on tech workshops in Norristown, PA. Youth teardown labs for ages 8–14, plus adult and family sessions. Find the next one, or bring eWasteGang to your school.">
+<meta name="author" content="Rashaad Bates">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23070C15'/><path d='M6 16h6m8 0h6M16 6v6m0 8v6' stroke='%234CC9FF' stroke-width='2.5'/><circle cx='16' cy='16' r='4.5' fill='%2335E08A'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: { ink:'#070C15', panel:'#101B2C', panel2:'#16233A', line:'#23324B',
+                circuit:'#35E08A', volt:'#4CC9FF', platter:'#C7D3E3', solder:'#F4B740' },
+      fontFamily: { display:['Space Grotesk','system-ui','sans-serif'],
+                    body:['IBM Plex Sans','system-ui','sans-serif'],
+                    data:['IBM Plex Mono','monospace'] }
+    }}
+  };
+</script>
+
+<link rel="stylesheet" href="site.css">
+</head>
+
+<body class="font-body bg-ink text-platter antialiased">
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ============================ HEADER ============================ -->
+<header class="sticky top-0 z-50 border-b border-line bg-ink/90 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+    <a href="index.html" class="flex items-center gap-3">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="#101B2C"></rect>
+        <path d="M6 16h6m8 0h6M16 6v6m0 8v6" stroke="#4CC9FF" stroke-width="2.5"></path>
+        <circle cx="16" cy="16" r="4.5" fill="#35E08A"></circle>
+      </svg>
+      <span class="font-display text-lg font-bold tracking-tight text-white">eWaste<span class="text-circuit">Gang</span></span>
+    </a>
+
+    <nav class="hidden items-center gap-7 md:flex" aria-label="Main">
+      <a href="index.html" class="nav-link font-data text-xs uppercase tracking-widest hover:text-circuit">Home</a>
+      <a href="about.html" class="nav-link font-data text-xs uppercase tracking-widest hover:text-circuit">About</a>
+      <a href="workshops.html" class="nav-link font-data text-xs uppercase tracking-widest hover:text-circuit" aria-current="page">Workshops</a>
+      <a href="services.html" class="nav-link font-data text-xs uppercase tracking-widest hover:text-circuit">Services</a>
+      <a href="get-involved.html" class="rounded-md bg-circuit px-4 py-2 font-data text-xs font-medium uppercase tracking-widest text-ink hover:bg-white">Get involved</a>
+    </nav>
+
+    <button data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" class="rounded-md border border-line p-2 md:hidden">
+      <span class="sr-only">Open menu</span>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+    </button>
+  </div>
+
+  <nav id="mobile-nav" data-nav-panel class="hidden border-t border-line bg-panel md:hidden" aria-label="Main (mobile)">
+    <a href="index.html" class="block border-b border-line px-5 py-3 font-data text-sm uppercase tracking-widest">Home</a>
+    <a href="about.html" class="block border-b border-line px-5 py-3 font-data text-sm uppercase tracking-widest">About</a>
+    <a href="workshops.html" class="block border-b border-line px-5 py-3 font-data text-sm uppercase tracking-widest text-circuit">Workshops</a>
+    <a href="services.html" class="block border-b border-line px-5 py-3 font-data text-sm uppercase tracking-widest">Services</a>
+    <a href="get-involved.html" class="block px-5 py-3 font-data text-sm uppercase tracking-widest text-circuit">Get involved</a>
+  </nav>
+</header>
+
+
+<main id="main">
+
+<!-- ============================ PAGE HERO ============================ -->
+<section class="border-b border-line">
+  <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:py-20">
+    <div class="reveal">
+      <p class="eyebrow">Workshops</p>
+      <h1 class="mt-5 font-display text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl">
+        Free, hands-on, and <span class="text-circuit">genuinely messy.</span>
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed">
+        Our core programme is built for kids ages 8&ndash;14, and we run adult and
+        family sessions alongside it. Nobody watches a slideshow. Everybody leaves
+        with something they took apart themselves.
+      </p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="#finder" class="rounded-md bg-circuit px-6 py-3.5 text-center font-display font-semibold text-ink transition hover:bg-white">Find the next session</a>
+        <a href="#bring-us" class="rounded-md border border-volt px-6 py-3.5 text-center font-display font-semibold text-volt transition hover:bg-volt hover:text-ink">Bring us to your school</a>
+      </div>
+    </div>
+    <div class="photo-tile reveal overflow-hidden rounded-xl border border-line" data-reveal-delay="120">
+      <img src="IMG_7195.JPEG"
+           alt="A mentor leans over a workshop table guiding four students in lab coats through a computer disassembly."
+           class="h-full w-full object-cover" loading="eager">
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================ CURRICULUM ============================ -->
+<section class="mx-auto max-w-6xl px-5 py-20">
+  <div class="reveal max-w-2xl">
+    <p class="eyebrow">The curriculum</p>
+    <h2 class="mt-4 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+      What students actually learn
+    </h2>
+    <p class="mt-4 leading-relaxed">
+      A full workshop runs about two hours and moves through four stages. Shorter
+      classroom visits cover the first two.
+    </p>
+  </div>
+
+  <!-- These ARE a sequence — a session runs in this order — so the numbering
+       carries real information rather than decoration. -->
+  <ol class="mt-12 grid gap-6 md:grid-cols-2">
+
+    <li class="card-lift reveal rounded-xl border border-line bg-panel p-7">
+      <span class="font-data text-xs tracking-widest text-circuit">STAGE 01</span>
+      <h3 class="mt-3 font-display text-xl font-semibold text-white">Hardware disassembly</h3>
+      <p class="mt-3 leading-relaxed">
+        Goggles and lab coats on. Students open a donated desktop or laptop and pull
+        it down to the board — drive, RAM, CPU, fan, power supply — learning what each
+        component does and how to handle it without damaging it.
+      </p>
+    </li>
+
+    <li class="card-lift reveal rounded-xl border border-line bg-panel p-7" data-reveal-delay="80">
+      <span class="font-data text-xs tracking-widest text-circuit">STAGE 02</span>
+      <h3 class="mt-3 font-display text-xl font-semibold text-white">Troubleshooting &amp; repair</h3>
+      <p class="mt-3 leading-relaxed">
+        Now put it back. We teach the diagnostic habit: change one thing, test, repeat.
+        Students learn why a machine won't post, how to swap a drive or stick of RAM,
+        and how to tell "broken" from "just needs cleaning".
+      </p>
+    </li>
+
+    <li class="card-lift reveal rounded-xl border border-line bg-panel p-7" data-reveal-delay="160">
+      <span class="font-data text-xs tracking-widest text-circuit">STAGE 03</span>
+      <h3 class="mt-3 font-display text-xl font-semibold text-white">Cybersecurity basics</h3>
+      <p class="mt-3 leading-relaxed">
+        Once you've held the drive in your hand, data stops being abstract. We cover
+        strong passwords, phishing, what "the cloud" physically is, safe habits online,
+        and how to properly erase a device before you give it away.
+      </p>
+    </li>
+
+    <li class="card-lift reveal rounded-xl border border-line bg-panel p-7" data-reveal-delay="240">
+      <span class="font-data text-xs tracking-widest text-circuit">STAGE 04</span>
+      <h3 class="mt-3 font-display text-xl font-semibold text-white">Upcycle build</h3>
+      <p class="mt-3 leading-relaxed">
+        The parts that can't be reused become material. Students design and build
+        something to take home — a disc clock, a board sculpture, a set of platter
+        coasters. It's the part they talk about on the way out.
+      </p>
+    </li>
+  </ol>
+</section>
+
+
+<!-- ============================ SESSION FINDER ============================ -->
+<section id="finder" class="border-y border-line bg-panel/40 py-20">
+  <div class="mx-auto max-w-6xl px-5">
+
+    <div class="reveal max-w-2xl">
+      <p class="eyebrow">Find a workshop</p>
+      <h2 class="mt-4 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        Sessions we run
+      </h2>
+      <p class="mt-4 leading-relaxed">
+        Filter by who it's for. Dates are set once a venue confirms — join the list
+        and we'll email you the next one near you.
+      </p>
+    </div>
+
+    <!-- Filter buttons. The default-active button carries the same classes that
+         site.js toggles, which guarantees Tailwind generates them. -->
+    <div class="reveal mt-8 flex flex-wrap gap-3" role="group" aria-label="Filter workshops by audience">
+      <button data-filter="all"    aria-pressed="true"  class="rounded-md border border-circuit bg-circuit px-4 py-2 font-data text-xs uppercase tracking-widest text-ink">All</button>
+      <button data-filter="youth"  aria-pressed="false" class="rounded-md border border-line px-4 py-2 font-data text-xs uppercase tracking-widest hover:border-circuit">Ages 8&ndash;14</button>
+      <button data-filter="family" aria-pressed="false" class="rounded-md border border-line px-4 py-2 font-data text-xs uppercase tracking-widest hover:border-circuit">Family</button>
+      <button data-filter="adult"  aria-pressed="false" class="rounded-md border border-line px-4 py-2 font-data text-xs uppercase tracking-widest hover:border-circuit">Adults</button>
+    </div>
+
+    <!-- EDIT ME: each <article> below is one session type. To post a real dated
+         event, copy a card and replace "Dates announced by email" with the date,
+         time and venue. -->
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+      <article data-audience="youth" class="card-lift reveal overflow-hidden rounded-xl border border-line bg-panel">
+        <div class="photo-tile overflow-hidden">
+          <img src="IMG_8960.JPEG" alt="Gloved hands opening a hard drive with a screwdriver on a red workshop table." class="h-48 w-full object-cover" loading="lazy">
+        </div>
+        <div class="p-6">
+          <p class="font-data text-xs uppercase tracking-widest text-volt">Ages 8&ndash;14 &middot; 2 hours &middot; Free</p>
+          <h3 class="mt-3 font-display text-xl font-semibold text-white">Teardown Lab</h3>
+          <p class="mt-3 text-sm leading-relaxed">
+            The flagship session. Full disassembly, part identification, reassembly,
+            plus an upcycle build to take home. Lab coats and tools provided.
+          </p>
+          <p class="mt-4 font-data text-xs uppercase tracking-widest text-platter/60">Dates announced by email</p>
+        </div>
+      </article>
+
+      <article data-audience="youth" class="card-lift reveal overflow-hidden rounded-xl border border-line bg-panel" data-reveal-delay="80">
+        <div class="photo-tile overflow-hidden">
+          <img src="20260718_124434.jpg" alt="A student in goggles closely examines a small circuit board." class="h-48 w-full object-cover" loading="lazy">
+        </div>
+        <div class="p-6">
+          <p class="font-data text-xs uppercase tracking-widest text-volt">Ages 8&ndash;14 &middot; 90 min &middot; Free</p>
+          <h3 class="mt-3 font-display text-xl font-semibold text-white">Stay Safe Online</h3>
+          <p class="mt-3 text-sm leading-relaxed">
+            Passwords, phishing, privacy settings and where your data actually lives —
+            taught with a real hard drive on the table, not a slide deck.
+          </p>
+          <p class="mt-4 font-data text-xs uppercase tracking-widest text-platter/60">Dates announced by email</p>
+        </div>
+      </article>
+
+      <article data-audience="family youth" class="card-lift reveal overflow-hidden rounded-xl border border-line bg-panel" data-reveal-delay="160">
+        <div class="photo-tile overflow-hidden">
+          <img src="IMG_8948.JPEG" alt="A craft table covered with CDs, circuit boards and tools for an upcycling session." class="h-48 w-full object-cover" loading="lazy">
+        </div>
+        <div class="p-6">
+          <p class="font-data text-xs uppercase tracking-widest text-volt">Family &middot; 2 hours &middot; Free</p>
+          <h3 class="mt-3 font-display text-xl font-semibold text-white">Upcycle Studio</h3>
+          <p class="mt-3 text-sm leading-relaxed">
+            Kids and grown-ups at the same table, building clocks and sculptures out
+            of dead hardware. The lowest-pressure way to try us out.
+          </p>
+          <p class="mt-4 font-data text-xs uppercase tracking-widest text-platter/60">Dates announced by email</p>
+        </div>
+      </article>
+
+      <article data-audience="adult family" class="card-lift reveal overflow-hidden rounded-xl border border-line bg-panel" data-reveal-delay="80">
+        <div class="photo-tile overflow-hidden">
+          <img src="LCN_students.png" alt="Adult learners at laptops in a classroom, smiling toward the camera." class="h-48 w-full object-cover" loading="lazy">
+        </div>
+        <div class="p-6">
+          <p class="font-data text-xs uppercase tracking-widest text-volt">Adults &middot; 2 hours &middot; Free</p>
+          <h3 class="mt-3 font-display text-xl font-semibold text-white">Computer Confidence</h3>
+          <p class="mt-3 text-sm leading-relaxed">
+            For anyone who feels behind: files and folders, updates, scams and
+            robocalls, backing things up, and what to do when it freezes.
+          </p>
+          <p class="mt-4 font-data text-xs uppercase tracking-widest text-platter/60">Dates announced by email</p>
+        </div>
+      </article>
+
+      <article data-audience="adult" class="card-lift reveal overflow-hidden rounded-xl border border-line bg-panel" data-reveal-delay="160">
+        <div class="photo-tile overflow-hidden">
+          <img src="IMG_0436.JPEG" alt="Adults seated in a community room during an eWasteGang information session." class="h-48 w-full object-cover" loading="lazy">
+        </div>
+        <div class="p-6">
+          <p class="font-data text-xs uppercase tracking-widest text-volt">Adults &middot; 1 hour &middot; Free</p>
+          <h3 class="mt-3 font-display text-xl font-semibold text-white">Wipe It Before You Ditch It</h3>
+          <p class="mt-3 text-sm leading-relaxed">
+            Bring the phone, tablet or laptop you're ready to let go of. We'll walk you
+            through erasing it properly — then recycle it for you on the spot.
+          </p>
+          <p class="mt-4 font-data text-xs uppercase tracking-widest text-platter/60">Dates announced by email</p>
+        </div>
+      </article>
+
+      <article data-audience="family adult youth" class="card-lift reveal overflow-hidden rounded-xl border border-line bg-panel" data-reveal-delay="240">
+        <div class="photo-tile overflow-hidden">
+          <img src="IMG_7294.jpeg" alt="A busy community makerspace with people working at long tables." class="h-48 w-full object-cover" loading="lazy">
+        </div>
+        <div class="p-6">
+          <p class="font-data text-xs uppercase tracking-widest text-volt">Everyone &middot; Drop-in &middot; Free</p>
+          <h3 class="mt-3 font-display text-xl font-semibold text-white">Collection &amp; Repair Day</h3>
+          <p class="mt-3 text-sm leading-relaxed">
+            Drop off e-waste, watch a teardown, or bring a machine that's acting up and
+            we'll take a look. Come for ten minutes or stay all afternoon.
+          </p>
+          <p class="mt-4 font-data text-xs uppercase tracking-widest text-platter/60">Dates announced by email</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="reveal mt-10 rounded-xl border border-line bg-panel p-6 sm:p-8">
+      <h3 class="font-display text-xl font-semibold text-white">Get the next date in your inbox</h3>
+      <p class="mt-2 text-sm leading-relaxed">
+        Tell us the age of your student and your part of town, and we'll let you know
+        what's closest.
+      </p>
+      <form class="mt-5 grid gap-4 sm:grid-cols-[1fr_1fr_auto]"
+            data-mailto-form
+            data-mailto-to="service@ewastegang.org"
+            data-mailto-subject="Workshop notification list">
+        <div>
+          <label for="finder-email" class="block font-data text-xs uppercase tracking-widest text-platter/70">Your email *</label>
+          <input id="finder-email" name="email" type="email" required
+                 class="mt-2 w-full rounded-md border border-line bg-ink px-4 py-3 text-white placeholder:text-platter/40 focus:border-circuit focus:outline-none"
+                 placeholder="you@example.com">
+        </div>
+        <div>
+          <label for="finder-notes" class="block font-data text-xs uppercase tracking-widest text-platter/70">Ages &amp; neighbourhood</label>
+          <input id="finder-notes" name="notes" type="text"
+                 class="mt-2 w-full rounded-md border border-line bg-ink px-4 py-3 text-white placeholder:text-platter/40 focus:border-circuit focus:outline-none"
+                 placeholder="Two kids, 9 and 12 — West End">
+        </div>
+        <div class="flex items-end">
+          <button type="submit" class="w-full rounded-md bg-circuit px-6 py-3 font-display font-semibold text-ink transition hover:bg-white sm:w-auto">
+            Send
+          </button>
+        </div>
+        <p data-form-status class="hidden text-sm text-circuit sm:col-span-3"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================ BRING US TO YOU ============================ -->
+<section id="bring-us" class="mx-auto max-w-6xl px-5 py-20">
+
+  <div class="reveal max-w-2xl">
+    <p class="eyebrow">Host a workshop</p>
+    <h2 class="mt-4 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+      Bring eWasteGang to your school or community centre
+    </h2>
+    <p class="mt-4 leading-relaxed">
+      We travel to schools, libraries, after-school programmes, churches, scout
+      troops and community centres across Montgomery County and the surrounding
+      area. There's no fee. Here's exactly how it goes.
+    </p>
+  </div>
+
+  <div class="mt-12 grid gap-12 lg:grid-cols-[1fr_1fr]">
+
+    <!-- Steps: a genuine sequence, so numbering earns its keep. -->
+    <ol class="reveal space-y-6">
+      <li class="flex gap-5">
+        <span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg border border-circuit font-data text-sm text-circuit">1</span>
+        <div>
+          <h3 class="font-display text-lg font-semibold text-white">Send us the basics</h3>
+          <p class="mt-1.5 leading-relaxed">
+            Use the form here or email us. We need your organisation, roughly how many
+            students, their ages, and two or three dates that could work.
+          </p>
+        </div>
+      </li>
+
+      <li class="flex gap-5">
+        <span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg border border-circuit font-data text-sm text-circuit">2</span>
+        <div>
+          <h3 class="font-display text-lg font-semibold text-white">We'll call to scope it</h3>
+          <p class="mt-1.5 leading-relaxed">
+            A fifteen-minute conversation. We'll confirm which session fits your group
+            and how long we have — anything from a 45-minute classroom visit to a full
+            two-hour lab.
+          </p>
+        </div>
+      </li>
+
+      <li class="flex gap-5">
+        <span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg border border-circuit font-data text-sm text-circuit">3</span>
+        <div>
+          <h3 class="font-display text-lg font-semibold text-white">You provide the room</h3>
+          <p class="mt-1.5 leading-relaxed">
+            Tables that can get messy, chairs, power outlets, and one staff member or
+            chaperone in the room. A gym, cafeteria, library or classroom all work fine.
+          </p>
+        </div>
+      </li>
+
+      <li class="flex gap-5">
+        <span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg border border-circuit font-data text-sm text-circuit">4</span>
+        <div>
+          <h3 class="font-display text-lg font-semibold text-white">We bring everything else</h3>
+          <p class="mt-1.5 leading-relaxed">
+            Donated machines, tools, gloves, safety goggles, lab coats, table covering,
+            and mentors. We set up before your students arrive and clean up after.
+          </p>
+        </div>
+      </li>
+
+      <li class="flex gap-5">
+        <span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg border border-circuit font-data text-sm text-circuit">5</span>
+        <div>
+          <h3 class="font-display text-lg font-semibold text-white">Workshop day</h3>
+          <p class="mt-1.5 leading-relaxed">
+            Students build something, take it home, and we haul away any e-waste your
+            building wants gone. If you'd like photos for your newsletter, tell us in
+            advance and we'll respect whatever media policy you have.
+          </p>
+        </div>
+      </li>
+    </ol>
+
+    <!-- Request form -->
+    <div class="reveal rounded-xl border border-line bg-panel p-7 sm:p-8" data-reveal-delay="100">
+      <h3 class="font-display text-2xl font-semibold text-white">Request a workshop</h3>
+      <p class="mt-2 text-sm leading-relaxed">
+        This opens a pre-filled email in your mail app — nothing is sent until you
+        press send. Prefer to write it yourself? Just email
+        <a href="mailto:service@ewastegang.org" class="text-volt underline underline-offset-4 hover:text-circuit">service@ewastegang.org</a>.
+      </p>
+
+      <form class="mt-6 space-y-5"
+            data-mailto-form
+            data-mailto-to="service@ewastegang.org"
+            data-mailto-subject="Workshop request">
+
+        <div>
+          <label for="host-org" class="block font-data text-xs uppercase tracking-widest text-platter/70">Organisation *</label>
+          <input id="host-org" name="org" type="text" required
+                 class="mt-2 w-full rounded-md border border-line bg-ink px-4 py-3 text-white placeholder:text-platter/40 focus:border-circuit focus:outline-none"
+                 placeholder="Norristown Area Middle School">
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label for="host-name" class="block font-data text-xs uppercase tracking-widest text-platter/70">Your name *</label>
+            <input id="host-name" name="name" type="text" required
+                   class="mt-2 w-full rounded-md border border-line bg-ink px-4 py-3 text-white focus:border-circuit focus:outline-none">
+          </div>
+          <div>
+            <label for="host-email" class="block font-data text-xs uppercase tracking-widest text-platter/70">Email *</label>
+            <input id="host-email" name="email" type="email" required
+                   class="mt-2 w-full rounded-md border border-line bg-ink px-4 py-3 text-white focus:border-circuit focus:outline-none">
+          </div>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label for="host-count" class="block font-data text-xs uppercase tracking-widest text-platter/70">Number of students</label>
+            <input id="host-count" name="students" type="number" min="1"
+                   class="mt-2 w-full rounded-md border border-line bg-ink px-4 py-3 text-white focus:border-circuit focus:outline-none"
+                   placeholder="25">
+          </div>
+          <div>
+            <label for="host-ages" class="block font-data text-xs uppercase tracking-widest text-platter/70">Ages</label>
+            <select id="host-ages" name="ages"
+                    class="mt-2 w-full rounded-md border border-line bg-ink px-4 py-3 text-white focus:border-circuit focus:outline-none">
+              <option>Ages 8–14 (our core programme)</option>
+              <option>Under 8</option>
+              <option>Teens 15–18</option>
+              <option>Adults</option>
+              <option>Mixed / family audience</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="host-dates" class="block font-data text-xs uppercase tracking-widest text-platter/70">Possible dates</label>
+          <input id="host-dates" name="dates" type="text"
+                 class="mt-2 w-full rounded-md border border-line bg-ink px-4 py-3 text-white placeholder:text-platter/40 focus:border-circuit focus:outline-none"
+                 placeholder="Any Saturday in October, or a weekday afternoon">
+        </div>
+
+        <div>
+          <label for="host-notes" class="block font-data text-xs uppercase tracking-widest text-platter/70">Anything else we should know</label>
+          <textarea id="host-notes" name="notes" rows="4"
+                    class="mt-2 w-full rounded-md border border-line bg-ink px-4 py-3 text-white placeholder:text-platter/40 focus:border-circuit focus:outline-none"
+                    placeholder="Room type, media policy, accessibility needs, e-waste you'd like collected…"></textarea>
+        </div>
+
+        <button type="submit" class="w-full rounded-md bg-circuit px-6 py-3.5 font-display font-semibold text-ink transition hover:bg-white">
+          Open my request email
+        </button>
+
+        <p data-form-status class="hidden text-sm text-circuit"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================ CTA ============================ -->
+<section class="border-t border-line bg-panel/40">
+  <div class="mx-auto max-w-6xl px-5 py-16">
+    <div class="reveal grid items-center gap-8 lg:grid-cols-[1.4fr_1fr]">
+      <div>
+        <h2 class="font-display text-3xl font-bold tracking-tight text-white">
+          Every workshop runs on donated hardware.
+        </h2>
+        <p class="mt-3 leading-relaxed">
+          The machines students take apart came from someone's closet. If you have
+          old equipment sitting around, that's the raw material for the next session.
+        </p>
+      </div>
+      <a href="get-involved.html" class="rounded-md bg-circuit px-6 py-3.5 text-center font-display font-semibold text-ink transition hover:bg-white">
+        Donate hardware or funds
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="border-t border-line bg-panel">
+  <div class="mx-auto max-w-6xl px-5 py-14">
+    <div class="grid gap-10 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <span class="font-display text-lg font-bold text-white">eWaste<span class="text-circuit">Gang</span></span>
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-platter/80">
+          Turning one person's trash into another's treasure — and teaching the
+          next generation how the machines actually work.
+        </p>
+        <p class="mt-5 font-data text-xs uppercase tracking-widest text-platter/60">
+          Powered by Tech Literacy &amp; The E-Waste Gang, a 501(c)(3)<br>
+          Norristown, Pennsylvania
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-data text-xs uppercase tracking-widest text-circuit">Pages</h2>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-volt">Home</a></li>
+          <li><a href="about.html" class="hover:text-volt">About us</a></li>
+          <li><a href="workshops.html" class="hover:text-volt">Workshops</a></li>
+          <li><a href="services.html" class="hover:text-volt">Services &amp; repairs</a></li>
+          <li><a href="get-involved.html" class="hover:text-volt">Donate / get involved</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-data text-xs uppercase tracking-widest text-circuit">Contact</h2>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="mailto:service@ewastegang.org" class="hover:text-volt">service@ewastegang.org</a></li>
+          <li><a href="get-involved.html#wipe" class="hover:text-volt">Wipe your device first</a></li>
+          <li><a href="get-involved.html#pgp" class="hover:text-volt">PGP public key</a></li>
+        </ul>
+        <div class="mt-5 flex gap-3">
+          <a href="#" aria-label="Facebook" class="rounded-md border border-line p-2 hover:border-volt hover:text-volt"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-9h3l1-4h-4V7c0-1.1.3-1.8 1.9-1.8H17V1.6C16.4 1.5 15.3 1.4 14 1.4c-2.9 0-4.9 1.8-4.9 5V9H6v4h3.1v9z"/></svg></a>
+          <a href="#" aria-label="Instagram" class="rounded-md border border-line p-2 hover:border-volt hover:text-volt"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="YouTube" class="rounded-md border border-line p-2 hover:border-volt hover:text-volt"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.8-.5-5.6a3 3 0 0 0-2.1-2.1C18.6 3.8 12 3.8 12 3.8s-6.6 0-8.4.5A3 3 0 0 0 1.5 6.4C1 8.2 1 12 1 12s0 3.8.5 5.6a3 3 0 0 0 2.1 2.1c1.8.5 8.4.5 8.4.5s6.6 0 8.4-.5a3 3 0 0 0 2.1-2.1C23 15.8 23 12 23 12zM9.8 15.5v-7l6.2 3.5z"/></svg></a>
+          <a href="#" aria-label="LinkedIn" class="rounded-md border border-line p-2 hover:border-volt hover:text-volt"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.9 21H3.3V9h3.6zM5.1 7.4A2.1 2.1 0 1 1 5.1 3a2.1 2.1 0 0 1 0 4.4zM21 21h-3.6v-5.8c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V21H9.6V9H13v1.6h.1a3.8 3.8 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="trace-rule my-10"></div>
+
+    <p class="font-data text-xs text-platter/50">
+      &copy; <span data-year>2026</span> ewastegang.org &mdash; a DBA of Tech Literacy &amp; The E-Waste Gang.
+      Built and maintained in-house; suggestions always welcome at
+      <a href="mailto:service@ewastegang.org" class="text-volt hover:text-circuit">service@ewastegang.org</a>.
+    </p>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
